@@ -5301,10 +5301,14 @@
                 }
             });
             anonymousReplacedElement.className = PSEUDO_HIDE_ELEMENT_CLASS_BEFORE + " " + PSEUDO_HIDE_ELEMENT_CLASS_AFTER;
-            clone.className +=
-                pseudoElt === PseudoElementType.BEFORE
+            var newClass = pseudoElt === PseudoElementType.BEFORE
                     ? " " + PSEUDO_HIDE_ELEMENT_CLASS_BEFORE
                     : " " + PSEUDO_HIDE_ELEMENT_CLASS_AFTER;
+            if (clone.nodeName == 'svg') {
+                clone.class += newClass;
+            } else {
+                clone.className += newClass;
+            }
             return anonymousReplacedElement;
         };
         return DocumentCloner;
