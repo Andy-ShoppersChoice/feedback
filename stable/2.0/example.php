@@ -6,7 +6,7 @@ $data = json_decode($_SESSION['data']);
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="feedback.js"></script>
 	<link rel="stylesheet" href="feedback.min.css" />
 	<script type="text/javascript">
